@@ -1,0 +1,234 @@
+/* ===================================================
+   THE MAISON JS — Manual de Marca
+   Sistema de diseño: negro + dorado
+=================================================== */
+
+:root{
+  --js-black: #0b0b0c;
+  --js-charcoal: #17161a;
+  --js-gold: #c9a24b;
+  --js-gold-light: #e9cd8a;
+  --js-gold-deep: #8a6a24;
+  --js-cream: #f3ede0;
+  --js-line: rgba(201,162,75,0.35);
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  background-color: var(--js-black);
+  color: var(--js-cream);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+h1,h2,h3,h4,.font-display{
+  font-family: 'Cinzel', 'Playfair Display', serif;
+  letter-spacing: 0.04em;
+  color: var(--js-gold-light);
+}
+
+.font-sans{
+  font-family: 'Jost', 'Montserrat', sans-serif;
+}
+
+a{ color: var(--js-gold); text-decoration:none; }
+a:hover{ color: var(--js-gold-light); }
+
+.section{
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--js-line);
+}
+
+.section-alt{
+  background-color: var(--js-charcoal);
+}
+
+.eyebrow{
+  font-family: 'Jost', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.28em;
+  color: var(--js-gold);
+  margin-bottom: 0.75rem;
+}
+
+.section-title{
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin-bottom: 1.5rem;
+}
+
+.divider{
+  width: 70px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--js-gold), transparent);
+  margin: 1.25rem auto;
+}
+
+.divider-left{
+  margin-left: 0;
+}
+
+/* Navbar */
+.navbar-js{
+  background-color: rgba(11,11,12,0.92);
+  border-bottom: 1px solid var(--js-line);
+  backdrop-filter: blur(6px);
+}
+.navbar-js .nav-link{
+  font-family:'Jost', sans-serif;
+  font-size:0.85rem;
+  letter-spacing:0.12em;
+  color: var(--js-cream);
+  margin: 0 0.6rem;
+}
+.navbar-js .nav-link:hover{ color: var(--js-gold); }
+.navbar-js .navbar-brand{
+  font-family:'Cinzel', serif;
+  color: var(--js-gold-light);
+  letter-spacing: 0.12em;
+}
+
+/* Hero */
+.hero{
+  min-height: 92vh;
+  display:flex;
+  align-items:center;
+  background:
+    radial-gradient(ellipse at 50% 20%, rgba(201,162,75,0.10), transparent 60%),
+    var(--js-black);
+  position:relative;
+  border-bottom: 1px solid var(--js-line);
+}
+.hero-logo{
+  max-width: 240px;
+  width: 55%;
+  filter: drop-shadow(0 0 40px rgba(201,162,75,0.25));
+}
+.hero-title{
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  letter-spacing: 0.08em;
+  margin: 1.5rem 0 0.5rem;
+}
+.hero-sub{
+  font-family:'Jost', sans-serif;
+  letter-spacing: 0.22em;
+  font-size: 0.85rem;
+  color: var(--js-gold);
+  text-transform: uppercase;
+}
+.hero-tagline{
+  max-width: 560px;
+  margin: 1.5rem auto 0;
+  color: rgba(243,237,224,0.75);
+}
+
+/* Cards / frames */
+.js-card{
+  border: 1px solid var(--js-line);
+  background: linear-gradient(180deg, rgba(201,162,75,0.04), transparent);
+  padding: 2rem;
+  height: 100%;
+}
+.js-card h4{ font-size:1.2rem; margin-bottom:0.75rem; }
+
+/* Color swatches */
+.swatch{
+  height: 130px;
+  border: 1px solid var(--js-line);
+  display:flex;
+  align-items:flex-end;
+  padding: 0.75rem;
+  font-family:'Jost', sans-serif;
+  font-size:0.75rem;
+  letter-spacing: 0.05em;
+}
+.swatch-label{
+  background: rgba(0,0,0,0.35);
+  padding: 0.2rem 0.5rem;
+}
+
+/* Logo showcase */
+.logo-box{
+  border: 1px solid var(--js-line);
+  padding: 2.5rem 1rem;
+  text-align:center;
+}
+.logo-box img{ max-width: 140px; }
+.logo-box.on-cream{ background: var(--js-cream); }
+.logo-box.on-black{ background: var(--js-black); }
+.logo-box .cap{
+  font-family:'Jost', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  color: var(--js-gold);
+  margin-top: 1rem;
+  display:block;
+}
+
+/* Incorrect usage grid */
+.no-box{
+  border: 1px solid rgba(201,162,75,0.25);
+  padding: 1.5rem;
+  text-align:center;
+  position:relative;
+  opacity:0.85;
+}
+.no-box::after{
+  content:"✕";
+  position:absolute;
+  top:8px; right:12px;
+  color:#b23b3b;
+  font-size:1.1rem;
+}
+
+/* Product applications */
+.product-frame{
+  border: 1px solid var(--js-line);
+  overflow:hidden;
+}
+.product-frame img{ width:100%; display:block; }
+.product-caption{
+  font-family:'Jost', sans-serif;
+  font-size:0.8rem;
+  letter-spacing:0.1em;
+  padding: 0.9rem 1rem;
+  border-top: 1px solid var(--js-line);
+}
+
+/* Typography specimen */
+.type-specimen{ border-bottom: 1px solid var(--js-line); padding: 1.5rem 0; }
+.type-specimen:last-child{ border-bottom:none; }
+.type-label{
+  font-family:'Jost', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  color: rgba(243,237,224,0.55);
+  text-transform: uppercase;
+}
+
+/* Footer */
+footer{
+  background: var(--js-black);
+  padding: 3.5rem 0 2rem;
+}
+footer .social a{
+  display:inline-block;
+  width: 40px; height:40px;
+  border: 1px solid var(--js-line);
+  border-radius: 50%;
+  text-align:center;
+  line-height: 38px;
+  margin: 0 0.35rem;
+}
+footer .social a:hover{ border-color: var(--js-gold); }
+.fine-print{
+  font-family:'Jost', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing:0.05em;
+  color: rgba(243,237,224,0.45);
+}
+
+@media (max-width: 767px){
+  .section{ padding: 4rem 0; }
+}
