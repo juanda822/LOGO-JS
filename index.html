@@ -104,7 +104,9 @@
       <img
         src="images/logo.png"
         alt="Logotipo JS PRO COLLECTION"
-        class="hero-logo">
+        class="hero-logo"
+        fetchpriority="high"
+        decoding="async">
 
       <div class="eyebrow mt-3">Gorras · Relojes · Perfumes</div>
 
@@ -393,6 +395,8 @@
       <img
         src="images/logo.png"
         alt="JS PRO COLLECTION"
+        loading="lazy"
+        decoding="async"
         style="max-width:80px;margin-bottom:1rem;">
 
       <h3 style="font-size:1.3rem;">JS PRO COLLECTION</h3>
@@ -406,10 +410,53 @@
   </footer>
 
   <!-- Bootstrap JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 
-  <!-- HubSpot: cargar una sola vez -->
-  <script src="https://js.hsforms.net/forms/embed/52170485.js" defer></script>
+  <!-- HubSpot: se carga cuando la sección de contacto se acerca a la pantalla. -->
+  <script>
+    (function () {
+      var contactSection = document.getElementById('contacto');
+      var formContainer = document.querySelector('.hs-form-frame');
+      var started = false;
+      if (!contactSection || !formContainer) return;
+
+      function loadHubSpot() {
+        if (started) return;
+        started = true;
+        var script = document.createElement('script');
+        script.src = 'https://js.hsforms.net/forms/embed/52170485.js';
+        script.async = true;
+        script.onerror = function () {
+          started = false;
+          if (!document.getElementById('hubspot-retry')) {
+            var retry = document.createElement('button');
+            retry.type = 'button';
+            retry.id = 'hubspot-retry';
+            retry.className = 'btn-gold mt-3';
+            retry.textContent = 'Reintentar cargar formulario';
+            retry.addEventListener('click', function () {
+              retry.remove();
+              loadHubSpot();
+            });
+            formContainer.parentNode.appendChild(retry);
+          }
+        };
+        document.head.appendChild(script);
+      }
+
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          if (entries.some(function (entry) { return entry.isIntersecting; })) {
+            observer.disconnect();
+            loadHubSpot();
+          }
+        }, { rootMargin: '600px 0px' });
+        observer.observe(contactSection);
+      } else {
+        loadHubSpot();
+      }
+    })();
+  </script>
 
   <!-- Eventos para Google Tag Manager -->
   <script>
