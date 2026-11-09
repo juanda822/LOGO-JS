@@ -38,7 +38,7 @@ a{color:var(--js-gold);text-decoration:none}a:hover{color:var(--js-gold-light)}
 .accordion-body{font-family:'Jost',sans-serif;font-size:.95rem;color:rgba(243,237,224,.8)}
 .prefooter{padding:3rem 0;background:var(--js-charcoal);border-bottom:1px solid var(--js-line);font-family:'Jost',sans-serif;font-size:.85rem;letter-spacing:.08em}
 footer{background:var(--js-black);padding:3.5rem 0 2rem}
-.fine-print{font-family:'Jost',sans-serif;font-size:.75rem;color:rgba(243,237,224,.45)}
+.fine-print{font-family:'Jost',sans-serif;font-size:.75rem;color:rgba(243,237,224,.78)}
 @media(max-width:767px){.section{padding:4rem 0}}
 
 /* Respeta la preferencia de movimiento reducido y mejora la accesibilidad del teclado. */
