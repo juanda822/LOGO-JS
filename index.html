@@ -35,6 +35,7 @@
 
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Estilos del proyecto -->
@@ -54,7 +55,7 @@
   </noscript>
 
   <!-- 1. HEADER -->
-  <nav class="navbar navbar-expand-lg navbar-js fixed-top py-3">
+  <nav class="navbar navbar-expand-lg navbar-js fixed-top py-3" aria-label="Navegación principal">
     <div class="container">
       <a class="navbar-brand" href="#inicio">JS PRO COLLECTION</a>
 
@@ -67,7 +68,7 @@
         aria-expanded="false"
         aria-label="Abrir menú"
         style="border-color:var(--js-gold);">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
       </button>
 
       <div class="collapse navbar-collapse justify-content-end" id="navMenu">
@@ -146,7 +147,7 @@
         <div class="col-6 col-lg-3">
           <div class="js-card">
             <span class="icon">◆</span>
-            <h4>Diseño propio</h4>
+            <h3>Diseño propio</h3>
             <p class="lead-s mb-0">Un mismo código visual en gorras, relojes y perfumes.</p>
           </div>
         </div>
@@ -154,7 +155,7 @@
         <div class="col-6 col-lg-3">
           <div class="js-card">
             <span class="icon">✦</span>
-            <h4>Calidad real</h4>
+            <h3>Calidad real</h3>
             <p class="lead-s mb-0">Materiales y acabados revisados pieza por pieza.</p>
           </div>
         </div>
@@ -162,7 +163,7 @@
         <div class="col-6 col-lg-3">
           <div class="js-card">
             <span class="icon">✆</span>
-            <h4>Atención directa</h4>
+            <h3>Atención directa</h3>
             <p class="lead-s mb-0">Compras por WhatsApp, sin intermediarios ni esperas.</p>
           </div>
         </div>
@@ -170,7 +171,7 @@
         <div class="col-6 col-lg-3">
           <div class="js-card">
             <span class="icon">➤</span>
-            <h4>Envío a todo el país</h4>
+            <h3>Envío a todo el país</h3>
             <p class="lead-s mb-0">Empaque cuidado y seguimiento de tu pedido.</p>
           </div>
         </div>
@@ -214,7 +215,7 @@
         <div class="col-md-4">
           <div class="js-card">
             <div class="step-n">01</div>
-            <h4>Elige tu categoría</h4>
+            <h3>Elige tu categoría</h3>
             <p class="lead-s mb-0">Gorras, relojes o perfumes: dinos qué te interesa.</p>
           </div>
         </div>
@@ -222,7 +223,7 @@
         <div class="col-md-4">
           <div class="js-card">
             <div class="step-n">02</div>
-            <h4>Recibe el catálogo</h4>
+            <h3>Recibe el catálogo</h3>
             <p class="lead-s mb-0">Te enviamos fotos, precios y opciones por WhatsApp.</p>
           </div>
         </div>
@@ -230,7 +231,7 @@
         <div class="col-md-4">
           <div class="js-card">
             <div class="step-n">03</div>
-            <h4>Paga y recibe</h4>
+            <h3>Paga y recibe</h3>
             <p class="lead-s mb-0">Confirmas tu pedido y lo enviamos a tu dirección.</p>
           </div>
         </div>
@@ -326,11 +327,11 @@
 
         <div class="accordion-item">
           <h3 class="accordion-header">
-            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f1">
+            <button type="button" id="faq-question-1" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f1" aria-expanded="false" aria-controls="f1">
               ¿Cómo hago mi pedido?
             </button>
           </h3>
-          <div id="f1" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+          <div id="f1" class="accordion-collapse collapse" data-bs-parent="#faqAcc" role="region" aria-labelledby="faq-question-1">
             <div class="accordion-body">
               Escríbenos por WhatsApp, elige tus productos y confirmamos disponibilidad y envío.
             </div>
@@ -339,11 +340,11 @@
 
         <div class="accordion-item">
           <h3 class="accordion-header">
-            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f2">
+            <button type="button" id="faq-question-2" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f2" aria-expanded="false" aria-controls="f2">
               ¿Qué medios de pago aceptan?
             </button>
           </h3>
-          <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+          <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAcc" role="region" aria-labelledby="faq-question-2">
             <div class="accordion-body">
               Transferencia, Nequi/Daviplata y otros medios que te indicaremos al confirmar.
             </div>
@@ -352,11 +353,11 @@
 
         <div class="accordion-item">
           <h3 class="accordion-header">
-            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f3">
+            <button type="button" id="faq-question-3" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f3" aria-expanded="false" aria-controls="f3">
               ¿Cuánto tarda el envío?
             </button>
           </h3>
-          <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+          <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAcc" role="region" aria-labelledby="faq-question-3">
             <div class="accordion-body">
               Entre 2 y 5 días hábiles según la ciudad de destino.
             </div>
@@ -365,11 +366,11 @@
 
         <div class="accordion-item">
           <h3 class="accordion-header">
-            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f4">
+            <button type="button" id="faq-question-4" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f4" aria-expanded="false" aria-controls="f4">
               ¿Puedo cambiar o devolver un producto?
             </button>
           </h3>
-          <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+          <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqAcc" role="region" aria-labelledby="faq-question-4">
             <div class="accordion-body">
               Sí, si llega con defectos o no es lo pedido, escríbenos dentro de los primeros 5 días.
             </div>
