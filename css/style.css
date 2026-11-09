@@ -25,7 +25,7 @@ a{color:var(--js-gold);text-decoration:none}a:hover{color:var(--js-gold-light)}
 .btn-wa{background:transparent;color:var(--js-gold)}
 .btn-wa:hover{background:rgba(201,162,75,.15);color:var(--js-gold-light)}
 .js-card{border:1px solid var(--js-line);background:linear-gradient(180deg,rgba(201,162,75,.05),transparent);padding:2rem;height:100%}
-.js-card h4{font-size:1.1rem;margin-bottom:.6rem}
+.js-card h3{font-size:1.1rem;margin-bottom:.6rem}
 .icon{font-size:1.8rem;color:var(--js-gold);display:block;margin-bottom:.5rem}
 .step-n{font-family:'Cinzel',serif;font-size:2.4rem;color:var(--js-gold)}
 .quote{font-style:italic;font-size:1.1rem}
@@ -40,3 +40,9 @@ a{color:var(--js-gold);text-decoration:none}a:hover{color:var(--js-gold-light)}
 footer{background:var(--js-black);padding:3.5rem 0 2rem}
 .fine-print{font-family:'Jost',sans-serif;font-size:.75rem;color:rgba(243,237,224,.45)}
 @media(max-width:767px){.section{padding:4rem 0}}
+
+/* Respeta la preferencia de movimiento reducido y mejora la accesibilidad del teclado. */
+:focus-visible{outline:3px solid var(--js-gold-light);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn-gold,.btn-wa{transition:none}}
+/* Evita que el encabezado fijo oculte el destino de los enlaces internos. */
+[id]{scroll-margin-top:90px}
