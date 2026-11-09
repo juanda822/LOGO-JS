@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://juanda822.github.io/LOGO-JS/sitemap.xml
